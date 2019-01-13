@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 2 | Blank Page</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="../assets/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../assets/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../assets/adminlte/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../assets/adminlte/css/skins/_all-skins.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <style>
+    .form-group  .form-control.invalid {
+      border-color: #dd4b39;
+      box-shadow: none;
+  }
+  
+  </style>
+</head>
+<body class="hold-transition skin-blue-light sidebar-mini fixed">
+<!-- Site wrapper -->
+<div class="wrapper">
+
+  
+  <div data-header></div>
+
+
+  <!-- =============================================== -->
+
+  <!-- Left side column. contains the sidebar -->
+  
+  <div data-navsidebar></div>
+
+  <!-- =============================================== -->
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Student Registration Configuration
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Configuration</a></li>
+        <li class="active">Student Registration Configuration</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+    
+
+      <section class="box loadbox" >
+  
+        <div class="box-body">
+          <form id="configurestudent">
+              
+            <h3>Basic Configuration</h3><hr/>
+              <div class="form-group">
+                  <label for="familyincome">Maximum Family Income </label>
+                  <input type="text" class ="form-control" id="familyIncome" name="familyincome" placeholder="Enter maximum amount acceptable " data-parsley-trigger="focusout" data-parsley-error-message="Enter a valid amount eg:-(10000 or 10118.5)" data-parsley-type="number" required>
+              </div>
+              <div class="form-group">
+                    <label for="educationamt">Maximum Education Amount</label>
+                    <input type="text" class="form-control" id="educationamt" placeholder="Enter maximum amount acceptable" name="educationamt" data-parsley-trigger="focusout" data-parsley-error-message="Enter a valid amount eg:-(10000 or 10118.5)" data-parsley-type="number" required>
+            </div>
+            <div class="form-group">
+                    <label for="rejectmessage">Student Reject Message</label>
+                    <textarea name="rejectmessage" id="rejectmessage" class="form-control" placeholder="Message to be sent to rejected students " data-parsley-trigger="focusout" data-parsley-error-message="Enter a valid message"  required></textarea>
+            </div>
+            <div class="form-group">
+                    <label for="elevel">Minimum Education Level<span class="require"></span></label>
+                        <select class="form-control" id="elevel" name="elevel">
+                          <option value="pp">Pre Primary Section (Pre-Nursery, Nursery, KG, LKG (Lower Kindergarten) and UKG (Upper Kindergarten)</option>
+                          <option value="p">Primary Section (1<sup>st</sup> STD  to 4<sup>th</sup>) STD</option>
+                          <option value="m">Middle Section(5<sup>st</sup> STD to 8<sup>th</sup>STD)</option>
+                          <option value="s">Secondary Section (8<sup>th</sup> STD to 10<sup>th</sup> STD)</option>
+                          <option value="hsc">Higher Secondary Section(8<sup>th</sup> STD to 10<sup>th</sup> STD)</option>
+                          <option value="g">Graduate Section </option>
+                          <option value="pg">Post Graduate Section </option>
+                        </select>
+                </div> 
+            <h3>Education Level Cut-Off Marks</h3><hr/>
+            <div class="form-group">
+                    <label for="pp">Pre Primary Section (Pre-Nursery, Nursery, KG, LKG (Lower Kindergarten) and UKG (Upper Kindergarten)</label>
+                    <input type="text" class ="form-control" id="pp" name="pp" placeholder="Enter cut-off marks " data-parsley-trigger="focusout" data-parsley-error-message="Enter a percentage between 0 to 100" data-parsley-range="[0,100]" data-parsley-type="number" required>
+           </div>
+           <div class="form-group">
+                <label for="p">Primary Section (1<sup>st</sup> STD  to 4<sup>th</sup>) STD</label>
+                <input type="text" class ="form-control" id="p" name="p" placeholder="Enter cut-off marks "data-parsley-trigger="focusout" data-parsley-error-message="Enter a percentage between 0 to 100" data-parsley-range="[0,100]" data-parsley-type="number" required>
+           </div>
+           <div class="form-group">
+                <label for="m">Middle Section(5<sup>st</sup> STD to 8<sup>th</sup>STD)</label>
+                <input type="text" class ="form-control" id="m" name="m" placeholder="Enter cut-off marks "data-parsley-trigger="focusout" data-parsley-error-message="Enter a percentage between 0 to 100" data-parsley-range="[0,100]" data-parsley-type="number" required>
+           </div>
+           <div class="form-group">
+                <label for="s">Secondary Section (8<sup>th</sup> STD to 10<sup>th</sup> STD)</label>
+                <input type="text" class ="form-control" id="s" name="s" placeholder="Enter cut-off marks "data-parsley-trigger="focusout" data-parsley-error-message="Enter a percentage between 0 to 100" data-parsley-range="[0,100]" data-parsley-type="number" required>
+           </div>
+           <div class="form-group">
+                <label for="hsc">Higher Secondary Section(11<sup>th</sup> STD to 12<sup>th</sup> STD)</label>
+                <input type="text" class ="form-control" id="hsc" name="hsc" placeholder="Enter cut-off marks "data-parsley-trigger="focusout" data-parsley-error-message="Enter a percentage between 0 to 100" data-parsley-range="[0,100]" data-parsley-type="number" required>
+           </div>
+           <div class="form-group">
+                <label for="g">Graduate Section</label>
+                <input type="text" class ="form-control" id="g" name="g" placeholder="Enter cut-off marks "data-parsley-trigger="focusout" data-parsley-error-message="Enter a percentage between 0 to 100" data-parsley-range="[0,100]" data-parsley-type="number" required>
+           </div>
+           <div class="form-group">
+                <label for="pg">Post Graduate Section</label>
+                <input type="text" class ="form-control" id="pg" name="pg" placeholder="Enter cut-off marks "data-parsley-trigger="focusout" data-parsley-error-message="Enter a percentage between 0 to 100" data-parsley-range="[0,100]" data-parsley-type="number" required>
+           </div>
+
+            
+        </div>
+        <div class="box-footer">
+            <div class="pull-right">
+                <button type="submit"  class="btn btn-success">Update</button>
+            </div>
+        </div>
+
+    </form>
+      </section>
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+
+  <div data-controlsidebar></div>
+  <div data-footer></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="../assets/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../assets/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Loading Navigation -->
+<script src="common/loader.js"></script>
+<!-- SlimScroll -->
+<script src="../assets/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../assets/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../assets/adminlte/js/adminlte.min.js"></script>
+<script src="../assets/parsley/parsley.min.js"></script>
+<script>
+  $(document).ready(function () {
+  $("#configurestudent").parsley({
+    errorClass: 'invalid',
+    errorsWrapper: ' <span class="help-block"></span>',
+    errorTemplate: '<span style="color:red;"></span>',
+    errorsContainer : function(field) {
+                          const $parent = field.$element.closest('.form-group')
+                          console.log($parent)
+                          if ($parent.length) return $parent
+
+                          return field.$element
+                    } 
+  })
+
+
+    $("#configurestudent").on("submit",function(e){
+        e.preventDefault();        
+        console.log( $( this ).serialize() );
+    })
+  })
+</script>
+</body>
+</html>
